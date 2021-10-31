@@ -8,6 +8,7 @@
     <app-controls
       [counts]="todosCounts"
       (onChangeFilter)="selectedFilter = $event"
+      [selectedFilter]="selectedFilter"
       (onClear)="clearCompleted()"
     ></app-controls>
   </div>

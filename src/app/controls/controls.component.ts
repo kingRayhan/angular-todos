@@ -13,6 +13,9 @@ export class ControlsComponent implements OnInit {
   public TODO_STATUS = TODO_STATUS;
 
   @Input()
+  public selectedFilter: TODO_STATUS;
+
+  @Input()
   public counts: TodoCounts;
 
   @Output()
