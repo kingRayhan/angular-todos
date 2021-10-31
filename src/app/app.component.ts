@@ -1,16 +1,16 @@
 import { Component, OnChanges } from '@angular/core';
-import { v4 } from 'uuid';
 import { Todo } from 'src/models/Todo';
-import { TodoCounts } from 'src/models/TodoCounts';
+import { TODO_COUNTS } from 'src/models/TodoCounts';
 import { TODO_STATUS } from 'src/models/TODO_STATUS';
 
 @Component({
-  selector: 'app-root',
+  selector: '#root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnChanges {
   public todos: Todo[] = [];
+
+  constructor() {}
 
   public selectedFilter: TODO_STATUS = TODO_STATUS.ALL;
 
@@ -30,7 +30,7 @@ export class AppComponent implements OnChanges {
    * Todo counts
    * @returns TodoCounts
    */
-  get todosCounts(): TodoCounts {
+  get todosCounts(): TODO_COUNTS {
     return {
       totalCount: this.todos.length,
       completedCount: this.todos.filter((todo) => todo.done).length,
@@ -43,13 +43,7 @@ export class AppComponent implements OnChanges {
    * @param todo
    */
   public addTodo(task: string): void {
-    const todo: Todo = {
-      id: v4(),
-      task,
-      done: false,
-      created_at: new Date(),
-    };
-    this.todos.unshift(todo);
+    this.todos.unshift(new Todo(task));
   }
 
   public clearCompleted(): void {

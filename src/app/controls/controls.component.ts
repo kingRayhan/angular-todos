@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { TodoCounts } from 'src/models/TodoCounts';
+import { TODO_COUNTS } from 'src/models/TodoCounts';
 import { TODO_STATUS } from 'src/models/TODO_STATUS';
 
 @Component({
@@ -16,7 +16,7 @@ export class ControlsComponent implements OnInit {
   public selectedFilter: TODO_STATUS;
 
   @Input()
-  public counts: TodoCounts;
+  public counts: TODO_COUNTS;
 
   @Output()
   public onChangeFilter = new EventEmitter<TODO_STATUS>();
