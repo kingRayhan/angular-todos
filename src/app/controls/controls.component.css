@@ -1,0 +1,11 @@
+button {
+  @apply text-gray-600 uppercase text-sm;
+}
+
+.active {
+  @apply text-indigo-500;
+}
+
+.danger {
+  @apply text-red-500;
+}

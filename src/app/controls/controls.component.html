@@ -1,0 +1,16 @@
+<div class="flex justify-between">
+  <div class="flex space-x-4">
+    <button class="active" (click)="onChangeFilter.emit(TODO_STATUS.ALL)">
+      All ({{ counts.totalCount }})
+    </button>
+    <button (click)="onChangeFilter.emit(TODO_STATUS.ACTIVE)">
+      Pending ({{ counts.incompletedCount }})
+    </button>
+    <button (click)="onChangeFilter.emit(TODO_STATUS.COMPLETED)">
+      Done ({{ counts.completedCount }})
+    </button>
+  </div>
+  <div>
+    <button class="danger" (click)="onClear.emit()">Clear</button>
+  </div>
+</div>

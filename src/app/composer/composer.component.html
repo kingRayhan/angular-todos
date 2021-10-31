@@ -1,0 +1,9 @@
+<div class="border-t-2 border-indigo-500">
+  <input
+    type="text"
+    class="w-full p-5 bg-gray-100 border-none focus:outline-none focus:ring-0"
+    placeholder="Type and hit enter..."
+    [(ngModel)]="task"
+    (keyup.enter)="addTask()"
+  />
+</div>
