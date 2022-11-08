@@ -8,8 +8,6 @@ import { TODO_STATUS } from 'src/models/TODO_STATUS';
   styleUrls: ['./controls.component.css'],
 })
 export class ControlsComponent implements OnInit {
-  constructor() {}
-
   public TODO_STATUS = TODO_STATUS;
 
   @Input()

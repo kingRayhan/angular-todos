@@ -1,12 +1,17 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  OnInit,
+  Output,
+  ViewEncapsulation,
+} from '@angular/core';
 
 @Component({
   selector: 'app-composer',
   templateUrl: './composer.component.html',
+  encapsulation: ViewEncapsulation.Emulated,
 })
 export class ComposerComponent implements OnInit {
-  constructor() {}
-
   public task: string = '';
 
   @Output()
